@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert career guidance and coaching for EAPCET, POLYCET, APRJC, and admissions into B.Tech, Diploma, ITI, MBA, MCA, B.Pharmacy, and Nursing.">
+    <title>Advice & Vision Career Guidelines | Expert Coaching & Admissions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: #333;
+            color: white;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #444;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        h1, h2, h3 {
+            margin-top: 10px;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #f1c40f;
+            font-weight: bold;
+        }
+        .form-container {
+            margin-top: 30px;
+            padding: 15px;
+            background: #555;
+            border-radius: 10px;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #f1c40f;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+
+            var whatsappMessage = "New Student Inquiry:%0A" +
+                                  "Name: " + name + "%0A" +
+                                  "Email: " + email + "%0A" +
+                                  "Phone: " + phone + "%0A" +
+                                  "Message: " + message;
+
+            var whatsappURL = "https://wa.me/919985654945/?text=" + whatsappMessage;
+
+            // Submit form to email
+            document.getElementById("inquiryForm").submit();
+
+            // Redirect to WhatsApp
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://i.imgur.com/q9dFPJG.jpeg" alt="Sukumar Billa - Profile Picture" class="profile-img">
+        <h1>Sukumar Billa</h1>
+        <h2>Advice & Vision Career Guidelines</h2>
+        <p><strong>Guiding students towards a bright future with expert coaching and admission support.</strong></p>
+
+        <h3>Coaching Available For:</h3>
+        <ul>
+            <li>EAPCET</li>
+            <li>POLYCET</li>
+            <li>APRJC</li>
+        </ul>
+
+        <h3>Admissions Assistance For:</h3>
+        <ul>
+            <li>B.Tech (Within AP & Outside AP)</li>
+            <li>Diploma / ITI / Intermediate</li>
+            <li>MBA / MCA</li>
+            <li>B.Pharmacy / Nursing</li>
+        </ul>
+
+        <p><a href="https://maps.app.goo.gl/tZShgMnvvJtNK6h29?g_st=ac" target="_blank">View Location on Google Maps</a></p>
+        <p><a href="https://wa.me/919985654945/" target="_blank">Contact via WhatsApp</a></p>
+
+        <div class="form-container">
+            <h3>Student Inquiry Form</h3>
+            <form id="inquiryForm" action="https://formsubmit.co/Sukusukumar96@gmail.com" method="POST" onsubmit="sendToWhatsApp(event)">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+                <textarea id="message" name="message" placeholder="Your Query" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
